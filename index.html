@@ -165,6 +165,7 @@
             url: "https://securepay.tinkoff.ru/v2/Init",
             method: "POST",
             dataType: 'json',
+            contentType: "application/json; charset=utf-8",
             data: JSON.stringify(api_arr),
             success: function(data){
                 window.location=data.PaymentURL;
