@@ -137,8 +137,8 @@
     });
     function sendApi(amount,description,phone,mail,quantity) {
         var api_arr = {
-            TerminalKey:"TestB",
-            Amount:amount,
+            TerminalKey:"TinkoffBankTest",
+            Amount:quantity*amount*100,
             OrderId:Math.floor(Math.random() * (100-1000) + 1000),
             Description:description,
             DATA:{Phone:phone,Email:mail},
@@ -152,7 +152,7 @@
                         Name: description,
                         Price: amount,
                         Quantity: quantity,
-                        Amount: amount,
+                        Amount: quantity*amount*100,
                         PaymentMethod: "full_prepayment",
                         PaymentObject: "commodity",
                         Tax: "none"
